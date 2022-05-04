@@ -1,0 +1,7 @@
+# Each line is a file pattern followed by one or more owners.
+
+# General website
+*       @bedroesb
+
+# Mapping file
+/faircookbook_rdmkit_mapping.yml       @elixir-europe/fair-cookbook-editors @elixir-europe/rdmkit-editors
