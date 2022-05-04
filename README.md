@@ -21,5 +21,5 @@ Changes made to the [`faircookbook_rdmkit_mapping.yml`](https://github.com/elixi
 
 ---
 <br>
-<img src="https://faircookbook.elixir-europe.org/_static/cookbook-logo-small.png" alt="FAIR Cookbook logo" width="200"/> <img src="https://raw.githubusercontent.com/elixir-europe/rdmkit/master/assets/img/RDMkit_logo.svg" align="right" alt="RDMkit logo" width="150"/>
+<img src="https://faircookbook.elixir-europe.org/_static/cookbook-logo-small.png" alt="FAIR Cookbook logo" width="200"/>     &nbsp &nbsp &nbsp &nbsp<img src="https://raw.githubusercontent.com/elixir-europe/rdmkit/master/assets/img/RDMkit_logo.svg" alt="RDMkit logo" width="150"/>
 
