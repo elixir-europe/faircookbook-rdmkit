@@ -19,5 +19,7 @@ Links between the two services are stored in the [`faircookbook_rdmkit_mapping.y
 
 Changes made to the [`faircookbook_rdmkit_mapping.yml`](https://github.com/elixir-europe/faircookbook-rdmkit/blob/main/faircookbook_rdmkit_mapping.yml) file will only be merged in the `main` branch using pull requests and when at least one member of both editorials teams have approved the changes.
 
-
+---
+<br>
+<img src="https://faircookbook.elixir-europe.org/_static/cookbook-logo-small.png" alt="FAIR Cookbook logo" width="200"/> <img src="https://raw.githubusercontent.com/elixir-europe/rdmkit/master/assets/img/RDMkit_logo.svg" align="right" alt="RDMkit logo" width="150"/>
 
