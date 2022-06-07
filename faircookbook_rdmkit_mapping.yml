@@ -29,3 +29,8 @@
       fcb_id: FCB025
     - fcb_title: Creating a metadata profile
       fcb_id: FCB026
+- rdmkit_title: Plant sciences
+  rdmkit_filename: plant_sciences
+  links:
+    - fcb_title: Plant genomic and genetic variation data submission to EMBL-EBI databases
+      fcb_id: FCB061
