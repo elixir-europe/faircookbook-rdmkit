@@ -36,8 +36,6 @@
   rdmkit_filename: data_publication
   links:
     - fcb_title: Depositing in Zenodo generic repository
-      fcb_id: FCB007
-    - fcb_title: Depositing in Zenodo generic repository
       fcb_id: FCB009
 
 - rdmkit_title: Data quality
