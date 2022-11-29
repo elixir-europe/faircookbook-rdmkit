@@ -96,7 +96,7 @@ with open(rdmkit_cache_path, 'r') as rdmkit_cache:
 
 github_token = sys.argv[1]
 g = Github(github_token)
-repo = g.get_repo("bedroesb/faircookbook-rdmkit")
+repo = g.get_repo("elixir-europe/faircookbook-rdmkit")
 
 
 # ---- Create New Issue if a change is made in the pulled content compared to the cached content ----
@@ -115,12 +115,12 @@ for rdmkit_new_content_id, rdmkit_new_content_title in rdmkit_new_content.items(
 # ---- Update cached content files ----
 
 # FAIRCookbook
-contents = repo.get_contents(fcb_cache_path, ref="issue-creator")
-repo.update_file(contents.path, "Update cache file", yaml.safe_dump(fcb_new_content, sort_keys=True), contents.sha, branch="issue-creator")
+contents = repo.get_contents(fcb_cache_path, ref="main")
+repo.update_file(contents.path, "Update cache file", yaml.safe_dump(fcb_new_content, sort_keys=True), contents.sha, branch="main")
 
 # RDMkit
-contents = repo.get_contents(rdmkit_cache_path, ref="issue-creator")
-repo.update_file(contents.path, "Update cache file", yaml.safe_dump(rdmkit_new_content, sort_keys=True), contents.sha, branch="issue-creator")
+contents = repo.get_contents(rdmkit_cache_path, ref="main")
+repo.update_file(contents.path, "Update cache file", yaml.safe_dump(rdmkit_new_content, sort_keys=True), contents.sha, branch="main")
 with open(rdmkit_cache_path, 'w') as rdmkit_cache:
     yaml.safe_dump(rdmkit_new_content, rdmkit_cache, sort_keys=True)
 
