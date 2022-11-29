@@ -88,8 +88,8 @@ with open(fcb_cache_path, 'r') as fcb_cache:
     fcb_cached_content = yaml.load(fcb_cache)
 
 # RDMkit
-# with open(rdmkit_cache_path, 'r') as rdmkit_cache:
-#     rdmkit_cached_content = yaml.load(rdmkit_cache)
+with open(rdmkit_cache_path, 'r') as rdmkit_cache:
+    rdmkit_cached_content = yaml.load(rdmkit_cache)
 
 
 # ---- Create GitHub connection ----
@@ -107,9 +107,9 @@ for fcb_new_content_id, fcb_new_content_title in fcb_new_content.items():
         repo.create_issue(title=f"A new recipe was added to FCB: {fcb_new_content_id}", body=f"The recipe with FCB identifier {fcb_new_content_id} and title '{fcb_new_content_title}' was created.", labels=["new content","bot"])
 
 # RDMkit
-# for rdmkit_new_content_id, rdmkit_new_content_title in rdmkit_new_content.items():
-#     if rdmkit_new_content_id not in rdmkit_cached_content:
-#         repo.create_issue(title=f"A new recipe was added to RDMkit: {rdmkit_new_content_id}", body=f"The recipe with FCB identifier {rdmkit_new_content_id} and title '{rdmkit_new_content_title}' was created.", labels=["new content","bot"])
+for rdmkit_new_content_id, rdmkit_new_content_title in rdmkit_new_content.items():
+    if rdmkit_new_content_id not in rdmkit_cached_content:
+        repo.create_issue(title=f"A new recipe was added to RDMkit: {rdmkit_new_content_id}", body=f"The page with RDMkit path {rdmkit_new_content_id} and title '{rdmkit_new_content_title}' was created.", labels=["new content","bot"])
 
 
 # ---- Update cached content files ----
@@ -119,8 +119,8 @@ contents = repo.get_contents(fcb_cache_path, ref="issue-trigger")
 repo.update_file(contents.path, "Update cache file", yaml.safe_dump(fcb_new_content, sort_keys=True), contents.sha, branch="issue-trigger")
 
 # RDMkit
-# contents = repo.get_contents(rdmkit_cache_path, ref="issue-trigger")
-# repo.update_file(contents.path, "Update cache file", yaml.safe_dump(rdmkit_new_content, sort_keys=True), contents.sha, branch="issue-trigger")
+contents = repo.get_contents(rdmkit_cache_path, ref="issue-trigger")
+repo.update_file(contents.path, "Update cache file", yaml.safe_dump(rdmkit_new_content, sort_keys=True), contents.sha, branch="issue-trigger")
 with open(rdmkit_cache_path, 'w') as rdmkit_cache:
     yaml.safe_dump(rdmkit_new_content, rdmkit_cache, sort_keys=True)
 
