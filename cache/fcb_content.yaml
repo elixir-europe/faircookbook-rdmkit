@@ -72,4 +72,6 @@
 '#FCB075PRE': Using OpenRefine and Karma for FAIRification
 '#FCB076': Mapping Ontologies with OxO, EBI Ontology Xref Service
 '#FCB077PRE': Creating resolvable identifiers
-
+'#FCB078PRE': Mapping IMI APPROACH datasets to CDISC-SDTM standard
+'#FCB079': Introducing our FAIRification framework
+'#FCB080': Creating InChIKeys for IUPAC names
