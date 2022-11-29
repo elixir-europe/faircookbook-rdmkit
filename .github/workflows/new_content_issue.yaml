@@ -21,10 +21,6 @@ jobs:
         run: |
           python -m pip install --upgrade pip
           pip install pyyaml requests PyGithub ruamel.yaml
-      - name: test
-        run: | 
-          ls
-          pwd
       - name: Run issue creator script 
         run: | 
           python var/issue_creator.py ${{ secrets.GITHUB_TOKEN }}
