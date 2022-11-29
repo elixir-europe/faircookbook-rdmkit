@@ -27,4 +27,4 @@ jobs:
           pwd
       - name: Run issue creator script 
         run: | 
-          python var/pull_site_structure.py ${{ secrets.GITHUB_TOKEN }}
+          python var/issue_creator.py ${{ secrets.GITHUB_TOKEN }}
