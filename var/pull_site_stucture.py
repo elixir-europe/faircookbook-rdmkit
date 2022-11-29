@@ -1,0 +1,91 @@
+import requests
+from ruamel.yaml import YAML
+from github import Github
+import sys
+import yaml
+import os
+from requests.adapters import HTTPAdapter
+from urllib3.util.retry import Retry
+import re
+
+
+def client(url):
+    """API object fetcher"""
+    yaml = YAML()
+    session = requests.Session()
+    retry = Retry(connect=3, backoff_factor=15)
+    adapter = HTTPAdapter(max_retries=retry)
+    session.mount('http://', adapter)
+    session.mount('https://', adapter)
+    r = session.get(url)
+    if r.status_code == requests.codes.ok:
+        return yaml.load(r.text)
+
+
+def parse_fcb_id(yaml_segment, fcb_new_content):
+    """
+    Loop over a  segment from the FAIRCookbook TOC dict to populate the new content dictionary with FCBID:Title pairs.
+    """
+    for recipe in yaml_segment:
+        if 'title' in recipe and recipe['title'] and 'file' in recipe and recipe['file'] and recipe.ca.items:
+            if 'file' in recipe.ca.items:
+                for attr in recipe.ca.items['file']:
+                    if attr and attr.value and attr.value.strip():
+                        fcb_new_content[attr.value.strip(
+                        )] = recipe['title'].strip()
+
+            elif 'title' in recipe.ca.items:
+                for attr in recipe.ca.items['title']:
+                    if attr and attr.value and attr.value.strip():
+                        fcb_new_content[attr.value.strip(
+                        )] = recipe['title'].strip()
+
+        if 'sections' in recipe and recipe['sections']:
+            parse_fcb_id(recipe['sections'], fcb_new_content)
+
+
+# Params
+fcb_content_url = "https://raw.githubusercontent.com/FAIRplus/the-fair-cookbook/main/_toc.yml"
+fcb_cache_path = 'cache/fcb_content.yaml'
+
+rdmkit_content_url = "https://raw.githubusercontent.com/elixir-europe/rdmkit/master/_data/sidebars/data_management.yml"
+rdmkit_cache_path = 'cache/rdmkit_content.yaml'
+
+
+# ---- Parsing content from resources ----
+print('Parsing content from resources')
+# Parse FCB remote TOC yml file
+fcb_new_content = {}
+fcb_content = client(fcb_content_url)
+for part in fcb_content:
+    if 'chapters' in part and part['chapters']:
+        parse_fcb_id(part['chapters'], fcb_new_content)
+print('... FCB Parsed')
+
+# Parse RDMkit sidebar yml file
+rdmkit_new_content = {}
+rdmkit_content = client(rdmkit_content_url)
+
+# ---- Parsing cached content ----
+
+# FCB
+with open(fcb_cache_path, 'r') as fcb_cache:
+    fcb_cached_content = yaml.load(fcb_cache)
+
+# Create GitHub connection
+github_token = sys.argv[1]
+g = Github(github_token)
+repo = g.get_repo("elixir-europe/faircookbook-rdmkit")
+
+
+# Create New Issue if a change is made in the pulled content compared to the cached content
+
+for fcb_new_content_id, fcb_new_content_title in fcb_new_content.items():
+    if fcb_new_content_id not in fcb_cached_content:
+        repo.create_issue(title=f"A new recipe was added to FCB: {fcb_new_content_id}", body=f"The recipe with FCB identifier {fcb_new_content_id} and title '{fcb_new_content_title}' was created.", labels=["new content","bot"])
+
+
+# ---- Update cached content files ----
+repo.update_file(fcb_cache_path, "Update cache file", fcb_new_content, branch="issue-trigger")
+with open(fcb_cache_path, 'w') as fcb_cache:
+    yaml.safe_dump(fcb_new_content, fcb_cache, sort_keys=True)
