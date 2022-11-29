@@ -75,7 +75,7 @@ with open(fcb_cache_path, 'r') as fcb_cache:
 # Create GitHub connection
 github_token = sys.argv[1]
 g = Github(github_token)
-repo = g.get_repo("elixir-europe/faircookbook-rdmkit")
+repo = g.get_repo("bedroesb/faircookbook-rdmkit")
 
 
 # Create New Issue if a change is made in the pulled content compared to the cached content
