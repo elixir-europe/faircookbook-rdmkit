@@ -44,6 +44,18 @@ def parse_fcb_id(yaml_segment, fcb_new_content):
             parse_fcb_id(recipe['sections'], fcb_new_content)
 
 
+def parse_rdmkit_id(yaml_segment, rdmkit_new_content):
+    """
+    Populate the new content dictionary with RDMkitURL:Title pairs.
+    """
+    if 'subitems' in yaml_segment and yaml_segment['subitems']:
+        for page in yaml_segment['subitems']:
+            if 'title' in page and page['title'] and 'url' in page and page['url']:
+                rdmkit_new_content[page['url']] = page['title']
+            if 'subitems' in page and page['subitems']:
+                parse_rdmkit_id(page, rdmkit_new_content)
+
+            
 # Params
 fcb_content_url = "https://raw.githubusercontent.com/FAIRplus/the-fair-cookbook/main/_toc.yml"
 fcb_cache_path = 'cache/fcb_content.yaml'
@@ -53,6 +65,7 @@ rdmkit_cache_path = 'cache/rdmkit_content.yaml'
 
 
 # ---- Parsing content from resources ----
+
 print('Parsing content from resources')
 # Parse FCB remote TOC yml file
 fcb_new_content = {}
@@ -65,27 +78,49 @@ print('... FCB Parsed')
 # Parse RDMkit sidebar yml file
 rdmkit_new_content = {}
 rdmkit_content = client(rdmkit_content_url)
+parse_rdmkit_id(rdmkit_content, rdmkit_new_content)
+print('... RDMkit Parsed')
 
 # ---- Parsing cached content ----
 
-# FCB
+# FAIRCookbook
 with open(fcb_cache_path, 'r') as fcb_cache:
     fcb_cached_content = yaml.load(fcb_cache)
 
-# Create GitHub connection
+# RDMkit
+# with open(rdmkit_cache_path, 'r') as rdmkit_cache:
+#     rdmkit_cached_content = yaml.load(rdmkit_cache)
+
+
+# ---- Create GitHub connection ----
+
 github_token = sys.argv[1]
 g = Github(github_token)
 repo = g.get_repo("bedroesb/faircookbook-rdmkit")
 
 
-# Create New Issue if a change is made in the pulled content compared to the cached content
+# ---- Create New Issue if a change is made in the pulled content compared to the cached content ----
 
+# FAIRCookbook
 for fcb_new_content_id, fcb_new_content_title in fcb_new_content.items():
     if fcb_new_content_id not in fcb_cached_content:
         repo.create_issue(title=f"A new recipe was added to FCB: {fcb_new_content_id}", body=f"The recipe with FCB identifier {fcb_new_content_id} and title '{fcb_new_content_title}' was created.", labels=["new content","bot"])
 
+# RDMkit
+# for rdmkit_new_content_id, rdmkit_new_content_title in rdmkit_new_content.items():
+#     if rdmkit_new_content_id not in rdmkit_cached_content:
+#         repo.create_issue(title=f"A new recipe was added to RDMkit: {rdmkit_new_content_id}", body=f"The recipe with FCB identifier {rdmkit_new_content_id} and title '{rdmkit_new_content_title}' was created.", labels=["new content","bot"])
+
 
 # ---- Update cached content files ----
-repo.update_file(fcb_cache_path, "Update cache file", fcb_new_content, branch="issue-trigger")
-with open(fcb_cache_path, 'w') as fcb_cache:
-    yaml.safe_dump(fcb_new_content, fcb_cache, sort_keys=True)
+
+# FAIRCookbook
+contents = repo.get_contents(fcb_cache_path, ref="issue-trigger")
+repo.update_file(contents.path, "Update cache file", yaml.safe_dump(fcb_new_content, sort_keys=True), contents.sha, branch="issue-trigger")
+
+# RDMkit
+# contents = repo.get_contents(rdmkit_cache_path, ref="issue-trigger")
+# repo.update_file(contents.path, "Update cache file", yaml.safe_dump(rdmkit_new_content, sort_keys=True), contents.sha, branch="issue-trigger")
+with open(rdmkit_cache_path, 'w') as rdmkit_cache:
+    yaml.safe_dump(rdmkit_new_content, rdmkit_cache, sort_keys=True)
+
