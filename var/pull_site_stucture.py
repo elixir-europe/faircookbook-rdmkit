@@ -115,12 +115,12 @@ for rdmkit_new_content_id, rdmkit_new_content_title in rdmkit_new_content.items(
 # ---- Update cached content files ----
 
 # FAIRCookbook
-contents = repo.get_contents(fcb_cache_path, ref="issue-trigger")
-repo.update_file(contents.path, "Update cache file", yaml.safe_dump(fcb_new_content, sort_keys=True), contents.sha, branch="issue-trigger")
+contents = repo.get_contents(fcb_cache_path, ref="main")
+repo.update_file(contents.path, "Update cache file", yaml.safe_dump(fcb_new_content, sort_keys=True), contents.sha, branch="main")
 
 # RDMkit
-contents = repo.get_contents(rdmkit_cache_path, ref="issue-trigger")
-repo.update_file(contents.path, "Update cache file", yaml.safe_dump(rdmkit_new_content, sort_keys=True), contents.sha, branch="issue-trigger")
+contents = repo.get_contents(rdmkit_cache_path, ref="main")
+repo.update_file(contents.path, "Update cache file", yaml.safe_dump(rdmkit_new_content, sort_keys=True), contents.sha, branch="main")
 with open(rdmkit_cache_path, 'w') as rdmkit_cache:
     yaml.safe_dump(rdmkit_new_content, rdmkit_cache, sort_keys=True)
 
