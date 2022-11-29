@@ -85,11 +85,11 @@ print('... RDMkit Parsed')
 
 # FAIRCookbook
 with open(fcb_cache_path, 'r') as fcb_cache:
-    fcb_cached_content = yaml.load(fcb_cache)
+    fcb_cached_content = yaml.load(fcb_cache, Loader=yaml.FullLoader)
 
 # RDMkit
 with open(rdmkit_cache_path, 'r') as rdmkit_cache:
-    rdmkit_cached_content = yaml.load(rdmkit_cache)
+    rdmkit_cached_content = yaml.load(rdmkit_cache, Loader=yaml.FullLoader)
 
 
 # ---- Create GitHub connection ----
