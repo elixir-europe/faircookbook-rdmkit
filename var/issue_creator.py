@@ -51,7 +51,7 @@ def parse_rdmkit_id(yaml_segment, rdmkit_new_content):
     if 'subitems' in yaml_segment and yaml_segment['subitems']:
         for page in yaml_segment['subitems']:
             if 'title' in page and page['title'] and 'url' in page and page['url']:
-                rdmkit_new_content[page['url']] = page['title']
+                rdmkit_new_content[page['url'].strip("/")] = page['title']
             if 'subitems' in page and page['subitems']:
                 parse_rdmkit_id(page, rdmkit_new_content)
 
