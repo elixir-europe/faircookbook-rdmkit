@@ -1,0 +1,67 @@
+all_tools_and_resources: All tools and resources
+all_training_resources: All training resources
+be_resources: Belgium
+bioimaging_data: Bioimaging data
+biomolecular_simulation_data: Biomolecular simulation data
+compliance_monitoring: Compliance monitoring
+covid19_data_portal: COVID-19 Data Portal
+csc_assembly: CSC
+cz_resources: Czech Republic
+data_analysis: Data analysis
+data_brokering: Data brokering
+data_life_cycle: Data life cycle
+data_management_plan: Data management plan
+data_organisation: Data organisation
+data_protection: Data protection
+data_provenance: Data provenance
+data_publication: Data publication
+data_quality: Data quality
+data_steward_infrastructure: 'Data Steward: infrastructure'
+data_steward_policy: 'Data Steward: policy'
+data_steward_research: 'Data Steward: research'
+data_transfer: Data transfer
+de_resources: Germany
+dm_coordination: Data management coordination
+ee_resources: Estonia
+epitranscriptome_data: Epitranscriptome data
+es_resources: Spain
+existing_data: Existing data
+fi_resources: Finland
+fr_resources: France
+galaxy_assembly: Galaxy
+human_data: Human data
+identifiers: Identifiers
+ifb_assembly: IFB
+intrinsically_disordered_proteins: Intrinsically disordered proteins
+it_resources: Italy
+licensing: Licensing
+machine_actionability: Machine actionability
+marine_metagenomics: Marine metagenomics
+marine_metagenomics_assembly: Marine Metagenomics
+metadata_management: Documentation and metadata
+microbial_biotechnology: Microbial biotechnology
+national_resources: National resources
+nels_assembly: NeLS
+nl_resources: Netherlands
+no_resources: Norway
+omero_assembly: OMERO
+plant_genomics_assembly: Plant Genomics
+plant_phenomics_assembly: Plant Phenomics
+plant_sciences: Plant sciences
+proteomics: Proteomics
+pt_resources: Portugal
+rare_disease_data: Rare disease data
+researcher: Researcher
+se_resources: Sweden
+sensitive_data: Sensitive data
+storage: Data storage
+structural_bioinformatics: Structural bioinformatics
+tool_assembly: Tool assembly
+toxicology_data: Toxicology data
+transmed_assembly: TransMed
+tsd_assembly: TSD
+uk_resources: United Kingdom
+xnat_pic_assembly: XNAT-PIC
+your_domain: Your domain
+your_role: Your role
+your_tasks: Your tasks

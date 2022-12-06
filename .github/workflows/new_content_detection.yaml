@@ -1,0 +1,61 @@
+name: New content detection
+
+on:
+  schedule:
+    - cron:  '0 13 * * 1'
+  workflow_dispatch:
+jobs:
+  issues:
+    runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        python-version: [3.8]
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v3
+      - name: Set up Python ${{ matrix.python-version }}
+        uses: actions/setup-python@v2
+        with:
+          python-version: ${{ matrix.python-version }}
+      - name: Install dependencies
+        run: |
+          python -m pip install --upgrade pip
+          pip install pyyaml requests PyGithub ruamel.yaml
+      - name: Run issue creator script 
+        run: | 
+          python var/issue_creator.py ${{ secrets.GITHUB_TOKEN }}
+  titles:
+    runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        python-version: [3.8]
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v3
+      - name: Set up Python ${{ matrix.python-version }}
+        uses: actions/setup-python@v2
+        with:
+          python-version: ${{ matrix.python-version }}
+      - name: Install dependencies
+        run: |
+          python -m pip install --upgrade pip
+          pip install pyyaml PyGithub ruamel.yaml
+      - name: Run issue creator script 
+        run: | 
+          python var/issue_creator.py
+      - name: Show differences
+        run: 'git diff --stat'
+      - name: Create Pull Request
+        id: cpr
+        uses: peter-evans/create-pull-request@v3
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
+          commit-message: Update title faircookbook_rdmkit_mapping.yaml
+          title: 'Automatic title update faircookbook_rdmkit_mapping.yml'
+          body: |
+            This PR is automatically generated based on title changes on FAIRCookbook or RDMkit.
+
+            Please verify if these changes are valid.
+          reviewers: bedroesb
+          branch: title_updates
+          base: main

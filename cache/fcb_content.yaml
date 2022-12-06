@@ -1,0 +1,77 @@
+'#FCB003': Introducing vocabulary portals and lookup services
+'#FCB004': Selecting an ontology lookup service
+'#FCB005': Deploying EBI Ontology Loopkup Service
+'#FCB006': Introducing unique, persistent identifiers
+'#FCB007': Creating InChI & SMILES identifiers for chemical structures
+'#FCB008': Minting identifiers with Globus Minid client
+'#FCB009': Depositing to generic repositories - Zenodo use case
+'#FCB010': Introducing Search Engine Optimization (SEO)
+'#FCB011': Marking up Data pages with Schema.org & Bioschemas for SEO
+'#FCB012': Marking up Dataset page with Schema.org & Bioschemas for SEO
+'#FCB013': Marking up Data Catalogue page with Schema.org & Bioschemas for SEO
+'#FCB014': Transferring data with SFTP protocol
+'#FCB015': Downloading data with Aspera protocol
+'#FCB016': Interlinking data from different sources
+'#FCB017': Mapping identifiers with BridgeDb
+'#FCB018': Mapping identifiers using BridgeDb web services
+'#FCB019': Introducing terminologies and ontologies
+'#FCB020': Selecting terminologies and ontologies
+'#FCB021': Requesting new terms from terminologies and ontologies
+'#FCB022': Introducing ontology-related tools and services
+'#FCB023': Building an application ontology with ROBOT
+'#FCB024': Building an application ontology for metabolomics - MSIO
+'#FCB025': Creating a data/variable dictionary
+'#FCB026': Creating a metadata profile
+'#FCB027': Outlining a metadata profile for transcriptomics
+'#FCB028': Building a community compliant metadata profile - The Covid19 sample profile
+  use case
+'#FCB029': Converting from proprietary to open format
+'#FCB030': Validating file format - FASTQ example
+'#FCB031': Surveying extraction, transformation, load (ETL) tools
+'#FCB032': Licensing
+'#FCB033': Licensing Software
+'#FCB034': Licensing Data
+'#FCB035': Declaring data permitted uses
+'#FCB036': Introducing Provenance Information
+'#FCB037': Making an omics data matrix FAIR
+'#FCB038': FAIRifying Data Matrices - Step1 - Starting material
+'#FCB039': FAIRifying Data Matrices - Step2 - Structuring data
+'#FCB040': FAIRifying Data Matrices - Step3 - Exploring data with SPARQL
+'#FCB041': FAIRifying Data Matrices - Step4 - Integrating data
+'#FCB042': IMI eTox - toxicity datasets
+'#FCB044': Readying IMI Oncotrack - clinical cohort datasets for deposition to EBI
+  Biosamples
+'#FCB045': Depositing IMI ReSOLUTE transcriptomics datasets to EBI repositories
+'#FCB046': Introducing identifier resolution services
+'#FCB047': Building a catalogue of datasets
+'#FCB048': Deploying a data catalogue - The IMI data catalogue example
+'#FCB049': Assessing with FAIR Evaluator
+'#FCB050': Assessing with FAIRshake
+'#FCB051': Inventorying tools for converting data to RDF
+'#FCB052': Creating file checksums
+'#FCB053': Validating checksums to verify file integrity
+'#FCB054': Enhancing discoverability of EHDEN OHDSI data with Schema.org markup
+'#FCB055': Prioritizing projects for FAIRification
+'#FCB056': Reflecting on Practical Considerations for CROs to play FAIR
+'#FCB057': Outlining a metadata profile for Bioactivity data
+'#FCB058': Expressing Clinical Genetic Information as FHIR JSON
+'#FCB059': Converting VCF file to FHIR JSON
+'#FCB060': Registering datasets with Wikidata
+'#FCB061': Improving dataset maturity - the MIAPPE use case
+'#FCB062': Making Computational Workflows FAIR
+'#FCB063': Minimal Data Maturity with ISA - ISA-Tab and free text
+'#FCB064': Enhanced Data Maturity with ISA - ISA-JSON and ontology markup
+'#FCB065': Moving to a semantically typed version - ISA-JSON-LD
+'#FCB066': Dissemination - Packaging ISA as a Research Object (RO)
+'#FCB067': Depositing IMI EUBOPEN High-Content Screening data to EBI BioImage Archive
+'#FCB068': Framing FAIR and the notion of metadata
+'#FCB069': Training for FAIRification with open or synthetic biomedical datasets
+'#FCB070': Understanding the relation between FAIR and Knowledge Graphs
+'#FCB071': Raising Awareness in Public Knowledge Graphs for Life Sciences
+'#FCB073': Developing FAIR API for the Web
+'#FCB075PRE': Using OpenRefine and Karma for FAIRification
+'#FCB076': Mapping Ontologies with OxO, EBI Ontology Xref Service
+'#FCB077PRE': Creating resolvable identifiers
+'#FCB078PRE': Mapping IMI APPROACH datasets to CDISC-SDTM standard
+'#FCB079': Introducing our FAIRification framework
+'#FCB080': Creating InChIKeys for IUPAC names
