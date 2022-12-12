@@ -75,3 +75,6 @@
 '#FCB078PRE': Mapping IMI APPROACH datasets to CDISC-SDTM standard
 '#FCB079': Introducing our FAIRification framework
 '#FCB080': Creating InChIKeys for IUPAC names
+'#FCB081': Creating knowledge graphs from unstructured text
+'#FCB082': Introducing the DATS model
+'#FCB083': Registering SwissLipids identifiers in Wikidata
