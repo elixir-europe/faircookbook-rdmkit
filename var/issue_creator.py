@@ -57,11 +57,13 @@ def parse_rdmkit_id(yaml_segment, rdmkit_new_content):
 
             
 # Params
+mount_path = "cached-branch/"
+
 fcb_content_url = "https://raw.githubusercontent.com/FAIRplus/the-fair-cookbook/main/_toc.yml"
-fcb_cache_path = 'cached-branch/cache/fcb_content.yaml'
+fcb_cache_path = 'cache/fcb_content.yaml'
 
 rdmkit_content_url = "https://raw.githubusercontent.com/elixir-europe/rdmkit/master/_data/sidebars/data_management.yml"
-rdmkit_cache_path = 'cached-branch/cache/rdmkit_content.yaml'
+rdmkit_cache_path = 'cache/rdmkit_content.yaml'
 
 
 # ---- Parsing content from resources ----
@@ -84,11 +86,11 @@ print('... RDMkit Parsed')
 # ---- Parsing cached content ----
 
 # FAIRCookbook
-with open(fcb_cache_path, 'r') as fcb_cache:
+with open(mount_path + fcb_cache_path, 'r') as fcb_cache:
     fcb_cached_content = yaml.load(fcb_cache, Loader=yaml.FullLoader)
 
 # RDMkit
-with open(rdmkit_cache_path, 'r') as rdmkit_cache:
+with open(mount_path + rdmkit_cache_path, 'r') as rdmkit_cache:
     rdmkit_cached_content = yaml.load(rdmkit_cache, Loader=yaml.FullLoader)
 
 

@@ -9,18 +9,21 @@ import re
 yaml = YAML()
 
 # Params
-fcb_cache_path = 'cached-branch/cache/fcb_content.yaml'
-rdmkit_cache_path = 'cached-branch/cache/rdmkit_content.yaml'
+mount_path = "cached-branch/"
+
+
+fcb_cache_path = 'cache/fcb_content.yaml'
+rdmkit_cache_path = 'cache/rdmkit_content.yaml'
 mapping_path = 'faircookbook_rdmkit_mapping.yml'
 
 # ---- Parsing cached content ----
 
 # FAIRCookbook
-with open(fcb_cache_path, 'r') as fcb_cache:
+with open(mount_path + fcb_cache_path, 'r') as fcb_cache:
     fcb_cached_content = yaml.load(fcb_cache)
 
 # RDMkit
-with open(rdmkit_cache_path, 'r') as rdmkit_cache:
+with open(mount_path + rdmkit_cache_path, 'r') as rdmkit_cache:
     rdmkit_cached_content = yaml.load(rdmkit_cache)
 
 # ---- Parsing mapping file ----
