@@ -9,8 +9,8 @@ import re
 yaml = YAML()
 
 # Params
-fcb_cache_path = 'cache/fcb_content.yaml'
-rdmkit_cache_path = 'cache/rdmkit_content.yaml'
+fcb_cache_path = 'cached-branch/cache/fcb_content.yaml'
+rdmkit_cache_path = 'cached-branch/cache/rdmkit_content.yaml'
 mapping_path = 'faircookbook_rdmkit_mapping.yml'
 
 # ---- Parsing cached content ----

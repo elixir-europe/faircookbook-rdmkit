@@ -58,10 +58,10 @@ def parse_rdmkit_id(yaml_segment, rdmkit_new_content):
             
 # Params
 fcb_content_url = "https://raw.githubusercontent.com/FAIRplus/the-fair-cookbook/main/_toc.yml"
-fcb_cache_path = 'cache/fcb_content.yaml'
+fcb_cache_path = 'cached-branch/cache/fcb_content.yaml'
 
 rdmkit_content_url = "https://raw.githubusercontent.com/elixir-europe/rdmkit/master/_data/sidebars/data_management.yml"
-rdmkit_cache_path = 'cache/rdmkit_content.yaml'
+rdmkit_cache_path = 'cached-branch/cache/rdmkit_content.yaml'
 
 
 # ---- Parsing content from resources ----
@@ -105,19 +105,19 @@ repo = g.get_repo("elixir-europe/faircookbook-rdmkit")
 for fcb_new_content_id, fcb_new_content_title in fcb_new_content.items():
     if fcb_new_content_id not in fcb_cached_content:
         repo.create_issue(title=f"A new recipe was added to FCB: {fcb_new_content_id}", body=f"The recipe with FCB identifier {fcb_new_content_id} and title '{fcb_new_content_title}' was created.", labels=["new content","bot"])
-
+        print(f"A new recipe was added to FCB: {fcb_new_content_id}")
 # RDMkit
 for rdmkit_new_content_id, rdmkit_new_content_title in rdmkit_new_content.items():
     if rdmkit_new_content_id not in rdmkit_cached_content:
-        repo.create_issue(title=f"A new recipe was added to RDMkit: {rdmkit_new_content_id}", body=f"The page with RDMkit path {rdmkit_new_content_id} and title '{rdmkit_new_content_title}' was created.", labels=["new content","bot"])
-
+        repo.create_issue(title=f"A new page was added to RDMkit: {rdmkit_new_content_id}", body=f"The page with RDMkit path {rdmkit_new_content_id} and title '{rdmkit_new_content_title}' was created.", labels=["new content","bot"])
+        print(f"A new page was added to RDMkit: {rdmkit_new_content_id}", body=f"The page with RDMkit path {rdmkit_new_content_id} and title '{rdmkit_new_content_title}' was created.")
 
 # ---- Update cached content files ----
 
 # FAIRCookbook
-contents = repo.get_contents(fcb_cache_path, ref="main")
-repo.update_file(contents.path, "Update cache file", yaml.safe_dump(fcb_new_content, sort_keys=True), contents.sha, branch="main")
+contents = repo.get_contents(fcb_cache_path, ref="cache")
+repo.update_file(contents.path, "Update cache file", yaml.safe_dump(fcb_new_content, sort_keys=True), contents.sha, branch="cache")
 
 # RDMkit
-contents = repo.get_contents(rdmkit_cache_path, ref="main")
-repo.update_file(contents.path, "Update cache file", yaml.safe_dump(rdmkit_new_content, sort_keys=True), contents.sha, branch="main")
+contents = repo.get_contents(rdmkit_cache_path, ref="cache")
+repo.update_file(contents.path, "Update cache file", yaml.safe_dump(rdmkit_new_content, sort_keys=True), contents.sha, branch="cache")
