@@ -13,7 +13,7 @@ To align visions and to keep track of content changes in both repositories we cr
 
 ## The core of our collaboration
 
-Links between the two services are stored in the [`faircookbook_rdmkit_mapping.yml`](https://github.com/elixir-europe/faircookbook-rdmkit/blob/main/faircookbook_rdmkit_mapping.yml) file. Changes made to this file will not immediately impact the websites. On a weekly basis FAIR Cookbook and RDMkit will pull changes from this central YAML file to update there repository. This is done using GitHub actions and and is fully automatic. Any links towards FAIR Cookbook/RDMkit that were made manually will be overwritten by this process. In short: this repository holds the truth!
+Links between the two services are stored in the [`faircookbook_rdmkit_mapping.yml`](https://github.com/elixir-europe/faircookbook-rdmkit/blob/main/faircookbook_rdmkit_mapping.yml) file. Changes made to this file will not immediately impact the websites. On a weekly basis FAIR Cookbook and RDMkit will pull changes from this central YAML file to update there repository. This is done using GitHub actions and is fully automatic. Any links towards FAIR Cookbook/RDMkit that were made manually will be overwritten by this process. In short: this repository holds the truth!
 
 ### Code of conduct
 
