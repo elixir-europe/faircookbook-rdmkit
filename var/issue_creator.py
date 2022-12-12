@@ -106,12 +106,12 @@ repo = g.get_repo("elixir-europe/faircookbook-rdmkit")
 # FAIRCookbook
 for fcb_new_content_id, fcb_new_content_title in fcb_new_content.items():
     if fcb_new_content_id not in fcb_cached_content:
-        # repo.create_issue(title=f"A new recipe was added to FCB: {fcb_new_content_id}", body=f"The recipe with FCB identifier {fcb_new_content_id} and title '{fcb_new_content_title}' was created.", labels=["new content","bot"])
+        repo.create_issue(title=f"A new recipe was added to FCB: {fcb_new_content_id}", body=f"The recipe with FCB identifier {fcb_new_content_id} and title '{fcb_new_content_title}' was created.", labels=["new content","bot"])
         print(f"A new recipe was added to FCB: {fcb_new_content_id}")
 # RDMkit
 for rdmkit_new_content_id, rdmkit_new_content_title in rdmkit_new_content.items():
     if rdmkit_new_content_id not in rdmkit_cached_content:
-        # repo.create_issue(title=f"A new page was added to RDMkit: {rdmkit_new_content_id}", body=f"The page with RDMkit path {rdmkit_new_content_id} and title '{rdmkit_new_content_title}' was created.", labels=["new content","bot"])
+        repo.create_issue(title=f"A new page was added to RDMkit: {rdmkit_new_content_id}", body=f"The page with RDMkit path {rdmkit_new_content_id} and title '{rdmkit_new_content_title}' was created.", labels=["new content","bot"])
         print(f"A new page was added to RDMkit: {rdmkit_new_content_id}")
 
 # ---- Update cached content files ----
