@@ -3,6 +3,7 @@ all_training_resources: All training resources
 be_resources: Belgium
 bioimaging_data: Bioimaging data
 biomolecular_simulation_data: Biomolecular simulation data
+ch_resources: Switzerland
 compliance_monitoring: Compliance monitoring
 covid19_data_portal: COVID-19 Data Portal
 csc_assembly: CSC
@@ -40,6 +41,7 @@ marine_metagenomics: Marine metagenomics
 marine_metagenomics_assembly: Marine Metagenomics
 metadata_management: Documentation and metadata
 microbial_biotechnology: Microbial biotechnology
+molgenis_assembly: MOLGENIS
 national_resources: National resources
 nels_assembly: NeLS
 nl_resources: Netherlands
