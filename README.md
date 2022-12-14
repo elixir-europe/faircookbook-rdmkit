@@ -24,7 +24,7 @@ Changes made to the [`faircookbook_rdmkit_mapping.yml`](https://github.com/elixi
 - Domain pages should only link to domain specific recipes.
 - Task pages should only link to recipes for generic tasks.
 
-## Automations to increase sustainability
+## GitHub Actions to increase sustainability
 
 Because new content gets created over time in both resources, we created two automations to increase the sustainability.
 
@@ -34,7 +34,7 @@ Titles can change, and since the resources list links towards each other includi
 
 ### Automatic issue creation when new content is added to one of the resources
 
-Due to the changing nature of both resources, we will have to repeat the mapping exercise in the future. To make this job easier, we keep track of changes in both resources using GitHub issues on this repository. Cache files in the `cache` branch keep track of content using the sidebar files of both resources. If a new page are recipe gets added, an issue will be created describing this addition. This GitHub action is run weekly. The `cache` branch should never be deleted!
+Due to the changing nature of both resources, we will have to repeat the mapping exercise in the future. To make this job easier, we keep track of changes in both resources using GitHub issues which are opened automatically on this repository. Cache files in the `cache` branch are build using the sidebar files of both resources and store the content in the shape of title:url key-value pairs. If a new page or recipe gets added, an issue will be created describing this addition. This GitHub Action is run weekly. The `cache` branch should never be deleted!
 
 
 ---
