@@ -127,8 +127,6 @@
   links:
      - fcb_title: IMI EUBOPEN FAIR High-Content Screening data deposition
        fcb_id: FCB067
-     - fcb_title: Selecting terminologies and ontologies
-       fcb_id: FCB020
        
 - rdmkit_title: Data brokering
   rdmkit_filename: data_brokering
@@ -171,24 +169,14 @@
  - rdmit_title: Identifiers
    rdmkit_filename: identifiers
    links:
-     - fcb_title: Creating InChIKeys for IUPAC names
-       fcb_id: FCB080
      - fcb_title: Creating resolvable identifiers
        fcb_id: FCB077
-       
- - rdmit_title: Microbial biotechnology
-   rdmkit_filename: microbial_biotechnology
-   links:
-     - fcb_title: Selecting terminologies and ontologies
-       fcb_id: FCB020
+     - fcb_title: Interlinking data from different sources
+       fcb_id: FCB016
        
 - rdmkit_title: Data storage
   rdmkit_filename: storage
   links:
-    - fcb_title: Transferring data with SFTP protocol
-      fcb_id: FCB014
-    - fcb_title: Downloading data with Aspera protocol
-      fcb_id: FCB015
     - fcb_title: Licensing Software
       fcb_id: FCB033
     - fcb_title: Making Computational Workflows FAIR
@@ -197,21 +185,3 @@
       fcb_id: FCB0009
     - fcb_title: Registering datasets with Wikidata
       fcb_id: FCB060
-       
- - rdmit_title: Human data
-   rdmkit_filename: human_data
-   links:
-     - fcb_title: Selecting terminologies and ontologies
-       fcb_id: FCB020
-       
- - rdmit_title: Plant sciences
-   rdmkit_filename: plant_sciences
-   links:
-     - fcb_title: Selecting terminologies and ontologies
-       fcb_id: FCB020
-       
- - rdmit_title: Intrinsically disordered proteins
-   rdmkit_filename: intrinsically_disordered_proteins
-   links:
-     - fcb_title: Selecting terminologies and ontologies
-       fcb_id: FCB020
