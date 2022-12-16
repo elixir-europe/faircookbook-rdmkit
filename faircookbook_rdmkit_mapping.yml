@@ -54,16 +54,6 @@
     - fcb_title: Describe data by checksums
       fcb_id: FCB052
 
-- rdmkit_title: Identifiers
-  rdmkit_filename: identifiers
-  links:
-    - fcb_title: Unique, persistent identifiers
-      fcb_id: FCB006
-    - fcb_title: InChI and SMILES identifiers for chemical structures
-      fcb_id: FCB007
-    - fcb_title: Minting identifiers with Minid
-      fcb_id: FCB008
-
 - rdmkit_title: Licensing
   rdmkit_filename: licensing
   links:
@@ -173,6 +163,10 @@
        fcb_id: FCB077
      - fcb_title: Interlinking data from different sources
        fcb_id: FCB016
+     - fcb_title: Unique, persistent identifiers
+       fcb_id: FCB006
+     - fcb_title: Minting identifiers with Minid
+       fcb_id: FCB008
        
 - rdmkit_title: Data storage
   rdmkit_filename: storage
