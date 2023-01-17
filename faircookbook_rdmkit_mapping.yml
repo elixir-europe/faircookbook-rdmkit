@@ -75,6 +75,8 @@
     fcb_id: FCB010
   - fcb_title: Creating a metadata profile
     fcb_id: FCB026
+  - fcb_title: Interlinking data from different sources
+    fcb_id: FCB016
 
 - rdmkit_title: Documentation and metadata
   rdmkit_filename: metadata_management
@@ -137,18 +139,6 @@
   links:
   - fcb_title: Licensing
     fcb_id: FCB032
-
-- rdmkit_title: Documentation and metadata
-  rdmkit_filename: metadata_management
-  links:
-  - fcb_title: Search Engine Optimization (SEO)
-    fcb_id: FCB010
-
-- rdmkit_title: Machine actionability
-  rdmkit_filename: machine_actionability
-  links:
-  - fcb_title: Interlinking data from different sources
-    fcb_id: FCB016
 
 - rdmkit_title: Toxicology data
   rdmkit_filename: toxicology_data

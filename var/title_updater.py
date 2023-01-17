@@ -38,8 +38,8 @@ for i,rdmkit_page in enumerate(mapping_dict):
         mapping_dict[i]['rdmkit_title'] = rdmkit_cached_content[rdmkit_page['rdmkit_filename']]
     if 'links' in rdmkit_page and rdmkit_page['links']:
         for j,fcb_recipe in enumerate(rdmkit_page['links']):
-            if fcb_recipe['fcb_id'] in fcb_cached_content:
-                mapping_dict[i]['links'][j]['fcb_title'] = fcb_cached_content[fcb_recipe['fcb_id']]
+            if f"#{fcb_recipe['fcb_id']}" in fcb_cached_content:
+                mapping_dict[i]['links'][j]['fcb_title'] = fcb_cached_content[f"#{fcb_recipe['fcb_id']}"]
 
 # ---- Dump changes to file ----
 
