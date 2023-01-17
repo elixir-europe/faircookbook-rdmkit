@@ -138,25 +138,25 @@
     - fcb_title: Licensing
       fcb_id: FCB032
        
-- rdmit_title: Documentation and metadata
+- rdmkit_title: Documentation and metadata
   rdmkit_filename: metadata_management
   links:
     - fcb_title: Search Engine Optimization (SEO)
       fcb_id: FCB010
  
-- rdmit_title: Machine actionability
+- rdmkit_title: Machine actionability
   rdmkit_filename: machine_actionability
   links:
     - fcb_title: Interlinking data from different sources
       fcb_id: FCB016
 
-- rdmit_title: Toxicology data
+- rdmkit_title: Toxicology data
   rdmkit_filename: toxicology_data
   links:
     - fcb_title: Creating InChIKeys for IUPAC names
       fcb_id: FCB080
  
-- rdmit_title: Identifiers
+- rdmkit_title: Identifiers
   rdmkit_filename: identifiers
   links:
     - fcb_title: Creating resolvable identifiers
