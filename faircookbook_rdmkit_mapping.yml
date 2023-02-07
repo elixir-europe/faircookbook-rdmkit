@@ -31,6 +31,8 @@
     fcb_id: FCB034
   - fcb_title: Declaring data permitted uses
     fcb_id: FCB035
+  - fcb_title: Data Protection Impact Assessment and Data Privacy
+    fcb_id: FCB074
 
 - rdmkit_title: Data publication
   rdmkit_filename: data_publication
