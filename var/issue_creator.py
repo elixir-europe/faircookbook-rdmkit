@@ -106,7 +106,7 @@ repo = g.get_repo("elixir-europe/faircookbook-rdmkit")
 # FAIRCookbook
 for fcb_new_content_id, fcb_new_content_title in fcb_new_content.items():
     if fcb_new_content_id not in fcb_cached_content:
-        repo.create_issue(title=f"A new recipe was added to FCB: {fcb_new_content_id}", body=f"The recipe [{fcb_new_content_title}](/https://w3id.org/faircookbook/{fcb_new_content_id.removeprefix('#')}) was created. @elixir-europe/rdmkit-editors please check for possible connections with RDMkit pages.", labels=["new content","bot"])
+        repo.create_issue(title=f"A new recipe was added to FCB: {fcb_new_content_id}", body=f"The recipe [{fcb_new_content_title}](https://w3id.org/faircookbook/{fcb_new_content_id.removeprefix('#')}) was created. @elixir-europe/rdmkit-editors please check for possible connections with RDMkit pages.", labels=["new content","bot"])
         print(f"A new recipe was added to FCB: {fcb_new_content_id}")
 # RDMkit
 for rdmkit_new_content_id, rdmkit_new_content_title in rdmkit_new_content.items():
