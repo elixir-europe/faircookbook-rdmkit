@@ -39,7 +39,7 @@ Due to the changing nature of both resources, we will have to repeat the mapping
 
 ---
 
-<img src="https://faircookbook.elixir-europe.org/_static/cookbook-logo-small.png" alt="FAIR Cookbook logo" width="200"/>     
+<img src="https://faircookbook.elixir-europe.org/_static/cookbook-logo-small-old.png" alt="FAIR Cookbook logo" width="200"/>     
 
 <img src="https://raw.githubusercontent.com/elixir-europe/rdmkit/master/assets/img/RDMkit_logo.svg" alt="RDMkit logo" width="150"/>
 
