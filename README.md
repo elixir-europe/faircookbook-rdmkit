@@ -30,7 +30,7 @@ Because new content gets created over time in both resources, we created two aut
 
 ### Automatic updating of the titles in the [mapping file](faircookbook_rdmkit_mapping.yml)
 
-Titles can change, and since the resources list links towards each other including the title, we've put a system in place to prevent they get out of sync with the actual titles. A GitHub Action will weekly check for title changes using information from the sidebars of RDMkit and FAIRCookbook and create a pull request updating the titles in the main YAML file accordingly.
+Over time, page titles can change in both resources. We have thus put in place a system to keep displayed titles of linked pages in sync with the original resource. A GitHub Action will weekly check for title changes using information from the sidebars of RDMkit and FAIR Cookbook and create a pull request updating the titles in the main YAML file where needed.
 
 ### Automatic issue creation when new content is added to one of the resources
 
