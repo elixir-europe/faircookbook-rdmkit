@@ -17,7 +17,7 @@ Links between the two services are stored in the [`faircookbook_rdmkit_mapping.y
 
 ### Contributing
 
-Changes made to the [`faircookbook_rdmkit_mapping.yml`](hfaircookbook_rdmkit_mapping.yml) file will be merged in the `main` branch using pull requests and only when at least one member of each editorial team has approved the changes. The `main` branch is for this reason protected against direct changes to prevent unexpected behaviour on one of the resources.
+Changes made to the [`faircookbook_rdmkit_mapping.yml`](faircookbook_rdmkit_mapping.yml) file will be merged in the `main` branch using pull requests and only when at least one member of each editorial team has approved the changes. The `main` branch is for this reason protected against direct changes.
 
 ### Mapping rules
 - [Data life cycle](https://rdmkit.elixir-europe.org/data_life_cycle), [your role](https://rdmkit.elixir-europe.org/your_role), and [national resources](https://rdmkit.elixir-europe.org/national_resources) pages in RDMkit are not linked to FAIRCookbook recipes.
