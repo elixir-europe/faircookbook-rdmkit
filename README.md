@@ -21,7 +21,7 @@ Changes made to the [`faircookbook_rdmkit_mapping.yml`](hfaircookbook_rdmkit_map
 
 ### Mapping rules
 - [Data life cycle](https://rdmkit.elixir-europe.org/data_life_cycle), [your role](https://rdmkit.elixir-europe.org/your_role), and [national resources](https://rdmkit.elixir-europe.org/national_resources) pages in RDMkit are not linked to FAIRCookbook recipes.
-- [Domain](https://rdmkit.elixir-europe.org/your_domain) pages in RDMkit should only link to domain specific FAIRCookbook recipes.
+- [Domain](https://rdmkit.elixir-europe.org/your_domain) pages in RDMkit should only link to domain specific FAIR Cookbook recipes.
 - [Task](https://rdmkit.elixir-europe.org/your_tasks) pages in RDMkit should only link to FAIRCookbook recipes for generic tasks.
 
 ## GitHub Actions to increase sustainability
