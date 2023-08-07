@@ -32,6 +32,7 @@ fi_resources: Finland
 fr_resources: France
 galaxy_assembly: Galaxy
 human_data: Human data
+human_pathogen_genomics: Human pathogen genomics
 identifiers: Identifiers
 ie_resources: Ireland
 ifb_assembly: IFB
