@@ -18,9 +18,7 @@ data_protection: Data protection
 data_provenance: Data provenance
 data_publication: Data publication
 data_quality: Data quality
-data_steward_infrastructure: 'Data Steward: infrastructure'
-data_steward_policy: 'Data Steward: policy'
-data_steward_research: 'Data Steward: research'
+data_steward: Data Steward
 data_transfer: Data transfer
 de_resources: Germany
 dm_coordination: Data management coordination
@@ -54,9 +52,12 @@ omero_assembly: OMERO
 plant_genomics_assembly: Plant Genomics
 plant_phenomics_assembly: Plant Phenomics
 plant_sciences: Plant sciences
+policy_maker: Policy maker
+principal_investigator: Principal Investigator (PI)
 proteomics: Proteomics
 pt_resources: Portugal
 rare_disease_data: Rare disease data
+research_software_engineer: Research Software Engineer
 researcher: Researcher
 se_resources: Sweden
 sensitive_data: Data sensitivity
