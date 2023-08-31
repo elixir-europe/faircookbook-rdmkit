@@ -113,7 +113,7 @@
     fcb_id: FCB022
 
 - rdmkit_title: Data sensitivity
-  rdmkit_filename: sensitive_data
+  rdmkit_filename: data_sensitivity
   links:
   - fcb_title: Declaring data permitted uses
     fcb_id: FCB035
