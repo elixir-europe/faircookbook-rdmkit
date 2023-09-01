@@ -27,13 +27,13 @@
 - rdmkit_title: Data security
   rdmkit_filename: data_security
   links:
-  - fcb_title: Downloading data with Aspera
+  - fcb_title: Downloading data with Aspera protocol
     fcb_id: FCB015
-  - fcb_title: Transferring data with SFTP
+  - fcb_title: Transferring data with SFTP protocol
     fcb_id: FCB014
-  - fcb_title: How to create checksum files
+  - fcb_title: Creating file checksums
     fcb_id: FCB052
-  - fcb_title: How to check file integrity by validating checksums
+  - fcb_title: Validating checksums to verify file integrity
     fcb_id: FCB053
 
 - rdmkit_title: GDPR compliance
