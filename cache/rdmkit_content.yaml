@@ -15,10 +15,11 @@ data_brokering: Data brokering
 data_life_cycle: Data life cycle
 data_management_plan: Data management plan
 data_organisation: Data organisation
-data_protection: Data protection
 data_provenance: Data provenance
 data_publication: Data publication
 data_quality: Data quality
+data_security: Data security
+data_sensitivity: Data sensitivity
 data_steward: Data Steward
 data_transfer: Data transfer
 de_resources: Germany
@@ -30,6 +31,7 @@ existing_data: Existing data
 fi_resources: Finland
 fr_resources: France
 galaxy_assembly: Galaxy
+gdpr_compliance: GDPR compliance
 human_data: Human data
 human_pathogen_genomics: Human pathogen genomics
 identifiers: Identifiers
@@ -61,7 +63,7 @@ rare_disease_data: Rare disease data
 research_software_engineer: Research Software Engineer
 researcher: Researcher
 se_resources: Sweden
-sensitive_data: Data sensitivity
+si_resources: Slovenia
 storage: Data storage
 structural_bioinformatics: Structural bioinformatics
 tool_assembly: Tool assembly
