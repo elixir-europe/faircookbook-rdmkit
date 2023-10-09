@@ -123,21 +123,21 @@
 - rdmkit_title: Plant sciences
   rdmkit_filename: plant_sciences
   links:
-  - fcb_title: Improving dataset maturity - MIAPPE-compliant submission to EMBL-EBI databases
+  - fcb_title: Improving dataset maturity - the MIAPPE use case
     fcb_id: FCB061
-  - fcb_title: Publishing plant phenotypic data
+  - fcb_title: Registering SwissLipids identifiers in Wikidata
     fcb_id: FCB083
 
 - rdmkit_title: Plant Genomics
   rdmkit_filename: plant_genomics_assembly
   links:
-  - fcb_title: Improving dataset maturity - MIAPPE-compliant submission to EMBL-EBI databases
+  - fcb_title: Improving dataset maturity - the MIAPPE use case
     fcb_id: FCB061
 
 - rdmkit_title: Plant Phenomics
   rdmkit_filename: plant_phenomics_assembly
   links:
-  - fcb_title: Publishing plant phenotypic data
+  - fcb_title: Registering SwissLipids identifiers in Wikidata
     fcb_id: FCB083
 
 - rdmkit_title: Bioimaging data
