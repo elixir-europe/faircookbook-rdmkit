@@ -57,7 +57,7 @@
 '#FCB058': Expressing Clinical Genetic Information as FHIR JSON
 '#FCB059': Converting VCF file to FHIR JSON
 '#FCB060': Registering datasets with Wikidata
-'#FCB061': Improving dataset maturity - the MIAPPE use case
+'#FCB061': Improving dataset maturity - MIAPPE-compliant submission to EMBL-EBI databases
 '#FCB062': Making Computational Workflows FAIR
 '#FCB063': Minimal Data Maturity with ISA - ISA-Tab and free text
 '#FCB064': Enhanced Data Maturity with ISA - ISA-JSON and ontology markup
@@ -70,12 +70,14 @@
 '#FCB071': Raising Awareness in Public Knowledge Graphs for Life Sciences
 '#FCB073': Developing FAIR API for the Web
 '#FCB074': Data Protection Impact Assessment and Data Privacy
-'#FCB075PRE': Using OpenRefine and Karma for FAIRification
+'#FCB075': Using OpenRefine and Karma for FAIRification
 '#FCB076': Mapping Ontologies with OxO, EBI Ontology Xref Service
-'#FCB077PRE': Creating resolvable identifiers
-'#FCB078PRE': Mapping IMI APPROACH datasets to CDISC-SDTM standard
+'#FCB077': Creating resolvable identifiers
+'#FCB078': Mapping IMI APPROACH datasets to CDISC-SDTM standard
 '#FCB079': Introducing our FAIRification framework
 '#FCB080': Creating InChIKeys for IUPAC names
 '#FCB081': Creating knowledge graphs from unstructured text
 '#FCB082': Introducing the DATS model
-'#FCB083': Registering SwissLipids identifiers in Wikidata
+'#FCB083PRE': Publishing plant phenotypic data
+'#FCB084PRE': Creating a metadata profile for clinical trial protocols
+'#FCB085': Registering SwissLipids identifiers in Wikidata
