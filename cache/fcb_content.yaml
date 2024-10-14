@@ -78,6 +78,8 @@
 '#FCB080': Creating InChIKeys for IUPAC names
 '#FCB081': Creating knowledge graphs from unstructured text
 '#FCB082': Introducing the DATS model
-'#FCB083PRE': Publishing plant phenotypic data
+'#FCB083': Publishing plant phenotypic data
 '#FCB084PRE': Creating a metadata profile for clinical trial protocols
 '#FCB085': Registering SwissLipids identifiers in Wikidata
+'#FCB086': Depositing epifluorescence and confocal microscopy data to EBI BioImage
+  Archive
