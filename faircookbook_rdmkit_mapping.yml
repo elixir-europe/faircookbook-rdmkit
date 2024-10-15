@@ -150,6 +150,8 @@
   - fcb_title: Depositing IMI EUBOPEN High-Content Screening data to EBI BioImage
       Archive
     fcb_id: FCB067
+  - fcb_title: Depositing Covid-19 image data to BioImage Archive
+    fcb_id: FCB086
 
 - rdmkit_title: Data brokering
   rdmkit_filename: data_brokering
