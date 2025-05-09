@@ -212,3 +212,5 @@
   links:
   - fcb_title: Creating a metadata profile for clinical trial protocols
     fcb_id: FCB084
+  - fcb_title: Mapping IMI APPROACH datasets to CDISC-SDTM standard
+    fcb_id: FCB078
