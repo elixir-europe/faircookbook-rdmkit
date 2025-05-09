@@ -206,3 +206,9 @@
     fcb_id: FCB009
   - fcb_title: Registering datasets with Wikidata
     fcb_id: FCB060
+
+- rdmkit_title: Health data
+  rdmkit_filename: health_data
+  links:
+  - fcb_title: Creating a metadata profile for clinical trial protocols
+    fcb_id: FCB084
