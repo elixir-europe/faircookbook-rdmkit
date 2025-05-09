@@ -3,6 +3,7 @@ all_training_resources: All training resources
 be_resources: Belgium
 bioimaging_data: Bioimaging data
 biomolecular_simulation_data: Biomolecular simulation data
+cancer_data: Cancer data
 ch_resources: Switzerland
 compliance_monitoring: Compliance monitoring
 costs_data_management: Costs of data management
