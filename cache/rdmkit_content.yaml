@@ -28,6 +28,7 @@ data_transfer: Data transfer
 de_resources: Germany
 dm_coordination: Data management coordination
 ee_resources: Estonia
+enzymology_and_biocatalysis: Enzymology and biocatalysis
 epitranscriptome_data: Epitranscriptome data
 es_resources: Spain
 ethics: Ethical aspects
@@ -81,6 +82,7 @@ trainer: Trainer
 transmed_assembly: TransMed
 tsd_assembly: TSD
 uk_resources: United Kingdom
+virology: Virology
 xnat_pic_assembly: XNAT-PIC
 your_domain: Your domain
 your_role: Your role
