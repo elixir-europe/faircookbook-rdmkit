@@ -25,6 +25,8 @@
     fcb_id: FCB026
   - fcb_title: Surveying extraction, transformation, load (ETL) tools
     fcb_id: FCB031
+  - fcb_title: Introducing Search Engine Optimization (SEO)
+    fcb_id: FCB010
 
 - rdmkit_title: Data security
   rdmkit_filename: data_security
