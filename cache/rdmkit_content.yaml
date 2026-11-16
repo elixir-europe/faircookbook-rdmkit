@@ -58,6 +58,7 @@ machine_actionability: Machine actionability
 machine_learning: Machine learning
 marine_metagenomics: Marine metagenomics
 marine_metagenomics_assembly: Marine Metagenomics
+metabarcoding_assembly: Metabarcoding
 metadata_management: Documentation and metadata
 microbial_biotechnology: Microbial biotechnology
 molgenis_assembly: MOLGENIS
